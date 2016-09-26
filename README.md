@@ -2,29 +2,35 @@
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Pull gem:
 
-```ruby
-gem 'xlsx_md_converter'
-```
+    $ git pull http://github.com/gfrikpost/xlsx_md_converter
+
+Go to the folder:
+     $ cd xlsx_md_converter
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Run IRB:
 
-    $ gem install xlsx_md_converter
+    $ bin/console
+
 
 ## Usage
 
-run `bin/console`
+```ruby
+XLSXMdConverter.xlsx_to_md('file_path.xlsx') # => create converted file file_pathTIMESTAMP.md
+```
 
-XLSXMdConverter.xlsx_to_md('file_path.xlsx') - create converted file file_pathTIMESTAMP.md
+```ruby
+XLSXMdConverter.md_to_xlsx('file_path.md') # => create converted file file_pathTIMESTAMP.xlsx
+```
 
-XLSXMdConverter.md_to_xlsx('file_path.md') - create converted file file_pathTIMESTAMP.xlsx
-
-XLSXMdConverter.xlsx_to_simple_xlsx('file_path.xlsx') - create file file_pathTIMESTAMP.xlsx without format and formulas
+```ruby
+XLSXMdConverter.xlsx_to_simple_xlsx('file_path.xlsx') # => create file file_pathTIMESTAMP.xlsx without format and formulas
+```
 
 
 ## License
